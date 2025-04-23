@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-23T08:41:34.665Z",
+    "end": "2025-04-23T08:41:35.734Z",
+    "duration": 1069,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "336128f7-2594-4aff-97da-78489ddce21e",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/apitest.cy.js",
+      "file": "cypress/e2e/tests/apitest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "97e0bc1c-db77-44a1-a35b-f873b278aa02",
+          "title": "API Testing with JSONPlaceholder",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should fetch all posts",
+              "fullTitle": "API Testing with JSONPlaceholder should fetch all posts",
+              "timedOut": null,
+              "duration": 335,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', 'https://jsonplaceholder.typicode.com/posts').then(response => {\n  expect(response.status).to.eq(200);\n  // Log the full response to the Cypress Test Runner\n  cy.log(JSON.stringify(response));\n  // Log the full response to the browser console\n  console.log(response);\n  expect(response.body).to.have.length(100); // Validate the number of posts\n});",
+              "err": {},
+              "uuid": "fb94cb69-2c66-43e3-be60-7f78817160f6",
+              "parentUUID": "97e0bc1c-db77-44a1-a35b-f873b278aa02",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should create a new post",
+              "fullTitle": "API Testing with JSONPlaceholder should create a new post",
+              "timedOut": null,
+              "duration": 716,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('POST', 'https://jsonplaceholder.typicode.com/posts', {\n  title: 'gyan',\n  body: 'mishra',\n  userId: 1\n}).then(response => {\n  // Log the full response to the Cypress Test Runner\n  cy.log(JSON.stringify(response));\n  // Log the full response to the browser console\n  console.log(response);\n  expect(response.status).to.eq(201);\n  expect(response.body).to.have.property('id'); // Validate the new post ID\n});",
+              "err": {},
+              "uuid": "9f6a04b6-ef4c-403e-ae2f-9dcd70d19010",
+              "parentUUID": "97e0bc1c-db77-44a1-a35b-f873b278aa02",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fb94cb69-2c66-43e3-be60-7f78817160f6",
+            "9f6a04b6-ef4c-403e-ae2f-9dcd70d19010"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1051,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

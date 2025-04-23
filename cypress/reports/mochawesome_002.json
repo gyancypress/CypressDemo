@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-23T08:41:37.680Z",
+    "end": "2025-04-23T08:41:58.796Z",
+    "duration": 21116,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "59a8edbd-9ec8-4162-bcdc-298b047e28fc",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/loginTest.cy.js",
+      "file": "cypress/e2e/tests/loginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d40156d6-6ef9-4886-9c2e-43db45b8ccf8",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should log in successfully with valid credentials",
+              "fullTitle": "Login Tests should log in successfully with valid credentials",
+              "timedOut": null,
+              "duration": 21071,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.loginPage.visit();\n_loginPage.loginPage.enterEmail('gyancypress@gmail.com');\n_loginPage.loginPage.clickLoginButton();\n_loginPage.loginPage.clickLoginWithGoogle();\n_loginPage.loginPage.clickChooseAccount();\n_loginPage.loginPage.verifyBookingPage();\n_loginPage.loginPage.clickNavigatetoLogOut();\n_loginPage.loginPage.clickLogOut();\n_dashboardPage.dashboardPage.verifyLoginLink();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `input[type=\"email\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `input[type=\"email\"]`, but never found it.\n    at LoginPage.clickLoginWithGoogle (webpack://testautomationcypress/./cypress/e2e/pages/loginPage.js:20:11)\n    at Context.eval (webpack://testautomationcypress/./cypress/e2e/tests/loginTest.cy.js:9:14)",
+                "diff": null
+              },
+              "uuid": "f46ce318-576a-4fa3-b589-1e4243ba60f8",
+              "parentUUID": "d40156d6-6ef9-4886-9c2e-43db45b8ccf8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f46ce318-576a-4fa3-b589-1e4243ba60f8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 21071,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
